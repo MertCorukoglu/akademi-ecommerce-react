@@ -6,8 +6,6 @@ function JsxSample() {
 
     let onlineStatus = false;
 
-
-
     return (
         <div>
             <h1>{name}</h1>

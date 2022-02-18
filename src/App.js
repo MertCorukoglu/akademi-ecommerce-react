@@ -1,15 +1,20 @@
-import Content from "./Content";
-import JsxSample from "./examples/JsxSample";
-import Header from "./Header";
+import Navbar from "./hamburgerSite/Navbar";
+import Header from './hamburgerSite/Header'
+import PageContent from "./hamburgerSite/PageContent";
+import Footer from "./hamburgerSite/Footer";
+
 
 
 function App() {
-
+ 
   return (
     <>
-        <JsxSample></JsxSample>
-    </>
+       <Navbar></Navbar>
+       <Header></Header>
+       <PageContent></PageContent>
+       <Footer></Footer>
 
+    </>
   );
 }
 
