@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+
 
 function SupplierList() {
 
@@ -15,7 +17,7 @@ function SupplierList() {
     }, [])
 
     const clearList = () => {
-    setSuppliers([]);
+        setSuppliers([]);
 
     }
 
@@ -26,7 +28,7 @@ function SupplierList() {
 
     return (
         <>
-        <button onClick={() => clearList()}>Clear List</button>
+            <button onClick={() => clearList()}>Clear List</button>
 
             <table>
                 <tr>
@@ -35,6 +37,7 @@ function SupplierList() {
                     <td>Contact Name</td>
                     <td>City</td>
                     <td>Remove</td>
+                    <td>Detail</td>
                 </tr>
 
 
@@ -46,7 +49,8 @@ function SupplierList() {
                             <td>{item.contactTitle}</td>
                             <td>{item.address.city}</td>
                             <td><button onClick={() => removeItem(item.id)}>Remove</button></td>
-
+                            {/* <td><a href={"/Suppliers/" + item.id}>Detail</a></td> */}
+                            <td><Link to={"/suppliers/" + item.id}>Detail</Link></td>
                         </tr>)
                     })
                 }

@@ -20,12 +20,8 @@ ReactDOM.render(
       <Route path="/" element={<App />}>
       <Route index element={<ProductList />} />
       <Route path="/categories" element={<CategoryList/>}></Route>
-      <Route path="/suppliers" element={<SupplierList/>}></Route>
-      
-      <Route path="/suppliers/:id" element={<SupplierDetail></SupplierDetail>}></Route>
-
       <Route path="*" element={<NotFound />} />
-      </Route>
+    </Route>
     </Routes>
   </BrowserRouter>
   ,
