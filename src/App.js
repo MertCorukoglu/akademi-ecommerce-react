@@ -1,4 +1,8 @@
 
+import EffectSample from "./examples/effectSample/EffectSample";
+import CategoryList from "./examples/fetchSample/CategoryList";
+import ProductList from "./examples/fetchSample/ProductList";
+import SupplierList from "./examples/fetchSample/SupplierList";
 import StateSample2 from "./examples/stateSample/StateSample2";
 import StateSample3 from "./examples/stateSample/StateSample3";
 
@@ -17,7 +21,7 @@ function App() {
   
   return (
     <>
-<StateSample3></StateSample3>
+<SupplierList></SupplierList>
     </>
   );
 }
