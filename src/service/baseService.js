@@ -41,13 +41,33 @@ export const baseService = {
             body: JSON.stringify(data)
         }
 
-        await fetch("config.apiurl + url", requestOptions)
+        await fetch(config.apiurl + url, requestOptions)
         .then(res => res.json())
         .then((data) => {
             responseData = data;
             return responseData;
         })
         
+    },
+    delete: async(url,id) => {
+
+        let responseData = {};
+
+        let requestOptions = {
+            method: 'DELETE',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }
+        }
+        
+        await fetch(config.apiurl + url + '/' + id, requestOptions)
+        .then(res => res.json())
+        .then((data) => {
+            responseData = data;
+            return responseData;
+        })
+
     }
 }
 

@@ -12,6 +12,11 @@ import ProductList from './examples/fetchSample/ProductList';
 import NotFound from './examples/routerSample/NotFound';
 import SupplierDetail from './examples/fetchSample/SupplierDetail';
 import CategoryListView from './admin/views/category/CategoryListView';
+import AddCategoryView from './admin/views/category/AddCategoryView';
+import ProductListView from './admin/views/product/ProductListView';
+import AddProductView from './admin/views/product/AddProductView';
+import HomeView from './site/views/home/HomeView';
+
 
 
 ReactDOM.render(
@@ -19,7 +24,12 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-      <Route index element={<CategoryListView />} />
+      <Route index element={<HomeView />} />
+
+      <Route path="/admin/addproduct" element={<AddProductView />} />
+      <Route path="/admin/products" element={<ProductListView />} />
+      <Route path="/admin/categories" element={<CategoryListView />} />
+      <Route path="/admin/addcategory" element={<AddCategoryView />} />
 
       <Route path="*" element={<NotFound />} />
     </Route>
