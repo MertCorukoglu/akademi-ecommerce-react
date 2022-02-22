@@ -11,6 +11,7 @@ import SupplierList from './examples/fetchSample/SupplierList';
 import ProductList from './examples/fetchSample/ProductList';
 import NotFound from './examples/routerSample/NotFound';
 import SupplierDetail from './examples/fetchSample/SupplierDetail';
+import CategoryListView from './admin/views/category/CategoryListView';
 
 
 ReactDOM.render(
@@ -18,8 +19,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-      <Route index element={<ProductList />} />
-      <Route path="/categories" element={<CategoryList/>}></Route>
+      <Route index element={<CategoryListView />} />
+
       <Route path="*" element={<NotFound />} />
     </Route>
     </Routes>
