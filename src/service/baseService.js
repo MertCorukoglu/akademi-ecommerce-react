@@ -44,8 +44,8 @@ export const baseService = {
         await fetch(config.apiurl + url, requestOptions)
         .then(res => res.json())
         .then((data) => {
-            responseData = data;
-            return responseData;
+    
+            return data;
         })
         
     },

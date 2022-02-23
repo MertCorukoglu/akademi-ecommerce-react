@@ -23,7 +23,7 @@ function App() {
 <Header>
   <div className="logo" />
 
-  <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+  <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']}>
     <Menu.Item><Link to='/'>Home</Link></Menu.Item>
     <Menu.Item><Link to='/products'>Products</Link> </Menu.Item>
     <Menu.Item><Link to='/about'>About</Link> </Menu.Item>
