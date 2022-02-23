@@ -18,7 +18,7 @@ import AddProductView from './admin/views/product/AddProductView';
 import HomeView from './site/views/home/HomeView';
 import { CartProvider } from './store/CartContext';
 import CartView from './site/views/cart/CartView';
-
+import OrderView from './site/views/order/OrderView';
 
 
 ReactDOM.render(
@@ -32,6 +32,8 @@ ReactDOM.render(
       <Route index element={<HomeView />} />
       
       <Route path="/cart" element={<CartView />} />
+      <Route path="/order" element={<OrderView />} />
+
 
       <Route path="/admin/addproduct" element={<AddProductView />} />
       <Route path="/admin/products" element={<ProductListView />} />

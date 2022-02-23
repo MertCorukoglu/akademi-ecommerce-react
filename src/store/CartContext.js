@@ -1,12 +1,14 @@
 
 import {createContext, useState} from 'react'
+import { getCartFromLocalStorage } from '../utils/storageHelper/CartStorageHelper';
 
 const CartContext =  createContext(null);
 
 
 export const CartProvider = ({children}) => {
 
-    const [cart, setCart] = useState([]);
+    let defaultCart = getCartFromLocalStorage()
+    const [cart, setCart] = useState(defaultCart);
 
 
     const values = {

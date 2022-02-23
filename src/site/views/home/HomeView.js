@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Button, Card } from 'antd';
 import { baseService } from '../../../service/baseService';
 import CartContext from '../../../store/CartContext';
+import { setCartToLocalStorage } from '../../../utils/storageHelper/CartStorageHelper';
 
 const gridStyle = {
     width: '25%',
@@ -33,6 +34,7 @@ function HomeView() {
         if(product != null){
             product.quantity = product.quantity + 1
             setCart([...cart])
+            setCartToLocalStorage([...cart]);
         }
         else{
 
@@ -42,11 +44,12 @@ function HomeView() {
                 price : item.price,
                 name : item.name
             }
+            setCartToLocalStorage([...cart, newCartProduct]);
             setCart([...cart, newCartProduct]);
+
         }
 
                 
-        console.log('CART', cart);
     }
 
     return (
